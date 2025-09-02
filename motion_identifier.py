@@ -38,14 +38,15 @@ def motion_type(v, a):
 
     if v == 0 and a == 0:
          return "At Rest"
-    elif v != 0 and a == 0:
-         return "Constant Velocity"
-    elif v != 0 and a != 0:
-         return "Accelerating"
-    elif v == 0 and a != 0:
-         return "Starting from Rest"
+    elif v > 0 and a == 0:
+         return "Uniform Motion"
+    elif v > 0 and a < 0:
+         return "Decelerated Motion"
+    elif v > 0 and a > 0:
+         return "Accelerated Motion"
     else:
          return "Undefined Motion"
+
 
  
 
